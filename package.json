@@ -1,0 +1,38 @@
+{
+  "name": "adobe-mobile-ui",
+  "version": "0.0.0",
+  "description": "UI Components for mobile applications like the PhoneGap Developer App",
+  "main": "index.js",
+  "scripts": {
+    "build:button:desktop": "rsn -n topcoat -o ./css/button-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts,topcoat-root] ./components/button.css",
+    "build:button:mobile": "rsn -n topcoat -o ./css/button-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts,topcoat-root] ./components/button.css",
+    "build:select:desktop": "rsn -n topcoat -o ./css/select-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts,topcoat-root] ./components/select.css",
+    "build:select:mobile": "rsn -n topcoat -o ./css/select-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts,topcoat-root] ./components/select.css",
+    "build": "rm -rfv ./css/* && npm run build:button:desktop && npm run build:select:desktop && npm run build:button:mobile && npm run build:select:mobile",
+    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc -s ./css -d ./docs -p 'Topcoat Button' -t './node_modules/topdoc-theme'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonegap/adobe-mobile-ui.git"
+  },
+  "author": "Garth Braithwaite <garthdb@gmail.com> (http://garthdb.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/phonegap/adobe-mobile-ui/issues"
+  },
+  "homepage": "https://github.com/phonegap/adobe-mobile-ui#readme",
+  "devDependencies": {
+    "resin": "^1.2.1",
+    "topcoat-button": "^0.7.0",
+    "topdoc": "^0.4.0"
+  },
+  "dependencies": {
+    "topcoat-fonts": "^0.3.0",
+    "topcoat-root": "^1.0.0",
+    "topcoat-select-base": "^0.1.0",
+    "topcoat-variables-dark": "^1.1.2",
+    "topcoat-variables-desktop": "^1.1.0",
+    "topcoat-variables-shared": "^1.1.0",
+    "topdoc-theme": "^0.5.0"
+  }
+}
