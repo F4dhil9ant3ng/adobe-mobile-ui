@@ -16,7 +16,8 @@
 }
 
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   padding: 0;
   margin: 0;
   font: inherit;
@@ -25,8 +26,15 @@
   border: none;
 }
 
+.topcoat-button--quiet {
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   cursor: default;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -35,31 +43,42 @@
 }
 
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   box-sizing: border-box;
   background-clip: padding-box;
 }
 
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   white-space: nowrap;
   overflow: hidden;
 }
 
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   position: relative;
   display: inline-block;
   vertical-align: top;
 }
 
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   text-overflow: ellipsis;
 }
 
+.topcoat-button--quiet:disabled {
+  opacity: .3;
+  cursor: default;
+  pointer-events: none;
+}
+
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   text-decoration: none;
 }
 
@@ -84,7 +103,8 @@
 */
 
 .topcoat-button,
-.topcoat-button--cta {
+.topcoat-button--cta,
+.topcoat-button--quiet {
   padding: .625rem 4rem;
   font-size: 1rem;
   font-weight: 600;
@@ -104,7 +124,8 @@
 }
 
 .topcoat-button:hover,
-.topcoat-button--cta:hover {
+.topcoat-button--cta:hover,
+.topcoat-button--quiet:hover {
   background-color: hsl(0, 0%, 29%);
   color: white;
 }
@@ -117,11 +138,12 @@
 }
 
 .topcoat-button:focus,
-.topcoat-button--cta:focus {
+.topcoat-button--cta:focus,
+.topcoat-button--quiet:focus {
   border: 0;
   box-shadow: none;
   background-color: hsl(212, 95%, 44%);
-  outline: 0;
+  )outline: 0;
   color: white;
 }
 
@@ -173,4 +195,36 @@
 .topcoat-button--cta:disabled,
 .topcoat-button--cta:hover:disabled {
   border: 0;
+}
+
+/* topdoc
+  name: Quiet Button
+  description: A simple, yet quiet button
+  modifiers:
+    :active: Quiet button active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--quiet">Button</button>
+    <button class="topcoat-button--quiet" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - quiet
+*/
+
+.topcoat-button--quiet:hover {
+  text-shadow: none;
+  box-shadow: 0 0 0 2px hsl(0, 0%, 31%) inset;
+}
+
+.topcoat-button--quiet:active {
+  color: hsl(0, 0%, 31%);
+  text-shadow: none;
+  background-color: hsla(210, 2%, 25%, 1);
+  border: 0;
+  box-shadow: inset 0 2px hsla(0, 0%, 0%, .05);
 }

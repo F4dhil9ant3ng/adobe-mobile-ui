@@ -106,3 +106,51 @@
 .button--cta:disabled, .button--cta:hover:disabled {
   border: var(--border--cta);
 }
+
+/* topdoc
+  name: Quiet Button
+  description: A simple, yet quiet button
+  modifiers:
+    :active: Quiet button active state
+    :disabled: Disabled state
+    :hover: Hover state
+    :focus: Focused
+  markup:
+    <button class="topcoat-button--quiet">Button</button>
+    <button class="topcoat-button--quiet" disabled>Button</button>
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+    - quiet
+*/
+.button--quiet {
+  @extend: %button--common;
+  @extend: %button--quiet;
+}
+
+.button--quiet:disabled {
+  @extend: %button--disabled;
+}
+
+.button--quiet {
+  @extend: .button:hover;
+}
+
+.button--quiet:hover {
+  text-shadow: var(--text-shadow);
+  box-shadow: var(--box-shadow);
+}
+
+.button--quiet {
+  @extend: .button:focus;
+}
+
+.button--quiet:active {
+  color: var(--color);
+  text-shadow: var(--text-shadow);
+  background-color: var(--background-color--down);
+  border: var(--border);
+  box-shadow: var(--box-shadow--down);
+}

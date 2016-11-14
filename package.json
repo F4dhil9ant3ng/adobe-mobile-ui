@@ -8,7 +8,9 @@
     "build:button:mobile": "rsn -n topcoat -o ./css/button-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/button.css",
     "build:select:desktop": "rsn -n topcoat -o ./css/select-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts] ./components/select.css",
     "build:select:mobile": "rsn -n topcoat -o ./css/select-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/select.css",
-    "build": "rm -rfv ./css/* && npm run build:button:desktop && npm run build:select:desktop && npm run build:button:mobile && npm run build:select:mobile",
+    "build:tab-bar:desktop": "rsn -n topcoat -o ./css/tab-bar-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts] ./components/tab-bar.css",
+    "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/tab-bar.css",
+    "build": "rm -rfv ./css/* && npm run build:button:desktop && npm run build:select:desktop && npm run build:button:mobile && npm run build:select:mobile && npm run build:tab-bar:mobile && npm run build:tab-bar:desktop",
     "topdoc": "npm run build && rm -rfv ./docs/* && topdoc -s ./css -d ./docs -p 'Topcoat Button' -t './node_modules/topdoc-theme'"
   },
   "repository": {
