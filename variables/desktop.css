@@ -30,4 +30,8 @@
 
   --background-color--cta--hover: hsl(212, 95%, 44%);
   --background-color--cta--down: hsl(211, 94%, 38%);
+
+  --border-bottom--tab-bar: 1px solid;
+  --padding--tab-bar: .3125rem 0;
+  --margin--tab-bar: 0 .5rem;
 }

@@ -14,3 +14,129 @@
   src: url('../font/SourceSansPro-Semibold.otf');
   font-weight: 600;
 }
+
+.topcoat-tab-bar__button {
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+.topcoat-tab-bar__item > input {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  opacity: .001;
+  z-index: 1;
+  vertical-align: top;
+  outline: none;
+}
+
+.topcoat-tab-bar__button {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.topcoat-tab-bar__button {
+  box-sizing: border-box;
+  background-clip: padding-box;
+}
+
+.topcoat-tab-bar__button {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.topcoat-tab-bar__button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.topcoat-tab-bar__button {
+  text-overflow: ellipsis;
+}
+
+.topcoat-tab-bar__button:disabled {
+  opacity: .3;
+  cursor: default;
+  pointer-events: none;
+}
+
+.topcoat-tab-bar {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.topcoat-tab-bar__item {
+  width: auto;
+  border-radius: 0;
+}
+
+.topcoat-tab-bar__button {
+  text-decoration: none;
+}
+
+/* topdoc
+  name: Tab Bar
+  description: Component of tab buttons
+  modifiers:
+    :disabled: Disabled state
+  markup:
+    <div class="topcoat-tab-bar">
+      <label class="topcoat-tab-bar__item">
+        <input type="radio" name="tab-bar" checked="true">
+        <button class="topcoat-tab-bar__button">One</button>
+      </label>
+      <label class="topcoat-tab-bar__item">
+        <input type="radio" name="tab-bar">
+        <button class="topcoat-tab-bar__button">Two</button>
+      </label>
+      <label class="topcoat-tab-bar__item">
+        <input type="radio" name="tab-bar">
+        <button class="topcoat-tab-bar__button">Three</button>
+      </label>
+    </div>
+  examples:
+    mobile tab bar: http://codepen.io/Topcoat/pen/rJICF
+  tags:
+    - desktop
+    - light
+    - dark
+    - mobile
+    - tab
+    - group
+    - bar
+*/
+
+.topcoat-tab-bar__button {
+  padding: .3125rem 0;
+  margin: 0 .5rem;
+  min-height: 1.313rem;
+  line-height: 1.313rem;
+  letter-spacing: 0;
+  color: hsl(0, 0%, 31%);
+  text-shadow: none;
+  vertical-align: top;
+}
+
+.topcoat-tab-bar__button:active,
+.topcoat-tab-bar__button--large:active,
+:checked + .topcoat-tab-bar__button {
+  color: hsl(212, 79%, 49%);
+  border-bottom: 1px solid;
+}
+
+.topcoat-tab-bar__button:focus,
+.topcoat-tab-bar__button--large:focus {
+  z-index: 1;
+  outline: 0;
+}

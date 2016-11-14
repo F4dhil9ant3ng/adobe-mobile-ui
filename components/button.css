@@ -52,7 +52,7 @@
 .button:focus {
   border: var(--border--focus);
   box-shadow: var(--box-shadow--focus);
-  background-color: var(--background-color--focus);)
+  background-color: var(--background-color--focus);
   outline: 0;
   color: var(--color--hover);
 }
@@ -106,6 +106,9 @@
 .button--cta:disabled, .button--cta:hover:disabled {
   border: var(--border--cta);
 }
+.button--cta:focus {
+  outline: 0;
+}
 
 /* topdoc
   name: Quiet Button
@@ -128,29 +131,23 @@
 .button--quiet {
   @extend: %button--common;
   @extend: %button--quiet;
+  border: var(--border);
+  @extend: .button:hover;
+  @extend: .button:focus;
 }
 
 .button--quiet:disabled {
   @extend: %button--disabled;
 }
 
-.button--quiet {
-  @extend: .button:hover;
-}
-
 .button--quiet:hover {
   text-shadow: var(--text-shadow);
   box-shadow: var(--box-shadow);
-}
-
-.button--quiet {
-  @extend: .button:focus;
+  background-color: var(--background-color--hover);
 }
 
 .button--quiet:active {
-  color: var(--color);
   text-shadow: var(--text-shadow);
   background-color: var(--background-color--down);
-  border: var(--border);
-  box-shadow: var(--box-shadow--down);
+  box-shadow: var(--box-shadow);
 }

@@ -29,6 +29,7 @@
     "topdoc": "^0.4.0"
   },
   "dependencies": {
+    "topcoat-button-bar-base": "^1.0.0",
     "topcoat-fonts": "^0.3.0",
     "topcoat-root": "^1.0.0",
     "topcoat-select-base": "^0.1.0",
