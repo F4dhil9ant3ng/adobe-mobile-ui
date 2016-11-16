@@ -33,6 +33,7 @@
     "topcoat-fonts": "^0.3.0",
     "topcoat-root": "^1.0.0",
     "topcoat-select-base": "^0.1.0",
+    "topcoat-tab-bar": "^1.0.0",
     "topcoat-variables-dark": "^1.1.2",
     "topcoat-variables-desktop": "^1.1.0",
     "topcoat-variables-shared": "^1.1.0",
