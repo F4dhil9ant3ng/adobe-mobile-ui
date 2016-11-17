@@ -1,6 +1,7 @@
 @import "topcoat-tab-bar";
 
-.tab-bar__button {
+.tab-bar__button,
+.tab-bar__button--selected {
   background: transparent;
   box-shadow: none;
   padding: .625rem 0;
@@ -9,6 +10,7 @@
 }
 
 .tab-bar__button:active,
+.tab-bar__button--selected,
 :checked + .tab-bar__button,
 :active + .tab-bar__button {
   border-bottom: 2px solid;
