@@ -1,0 +1,21 @@
+/* topdoc
+  name: Combobox
+  description: A combobox
+  markup:
+    <div class="topcoat-combobox__container">
+      <input type="text" class="topcoat-text-input"/>
+      <div class="topcoat-combobox__suggestions-container">
+        <ul class="topcoat-list__container">
+          <li="topcoat-list__item">Preact</li>
+          <li="topcoat-list__item">React</li>
+        </ul>
+      </div>
+    </div>
+  examples:
+    mobile button: http://codepen.io/Topcoat/pen/DpKtf
+  tags:
+    - desktop
+    - light
+    - mobile
+    - button
+*/
