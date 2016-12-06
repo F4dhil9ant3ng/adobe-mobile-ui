@@ -11,7 +11,7 @@
     "build:tab-bar:desktop": "rsn -n topcoat -o ./css/tab-bar-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts] ./components/tab-bar.css",
     "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/tab-bar.css",
     "build": "rm -rfv ./css/* && npm run build:button:desktop && npm run build:combobox:desktop && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile && npm run build:tab-bar:desktop",
-    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc -s ./css -d ./docs -p 'Topcoat Button' -t './node_modules/topdoc-theme'"
+    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc ./css -p 'Topcoat Button'"
   },
   "repository": {
     "type": "git",
@@ -26,17 +26,16 @@
   "devDependencies": {
     "resin": "^1.2.1",
     "topcoat-button": "^0.7.0",
-    "topdoc": "^0.4.0"
+    "topdoc": "^1.0.11"
   },
   "dependencies": {
     "topcoat-button-bar-base": "^1.0.0",
     "topcoat-fonts": "^0.3.0",
     "topcoat-root": "^1.0.0",
-    "topcoat-combobox-base": "^0.1.0",
+    "topcoat-select-base": "^0.1.0",
     "topcoat-tab-bar": "^1.1.0",
     "topcoat-variables-dark": "^1.1.2",
     "topcoat-variables-desktop": "^1.1.0",
-    "topcoat-variables-shared": "^1.1.0",
-    "topdoc-theme": "^0.5.0"
+    "topcoat-variables-shared": "^1.1.0"
   }
 }
