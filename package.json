@@ -11,7 +11,7 @@
     "build:tab-bar:desktop": "rsn -n topcoat -o ./css/tab-bar-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts] ./components/tab-bar.css",
     "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/tab-bar.css",
     "build": "rm -rfv ./css/* && npm run build:button:desktop && npm run build:combobox:desktop && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile && npm run build:tab-bar:desktop",
-    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc ./css -p 'Topcoat Button'"
+    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc ./css -a ./assets/"
   },
   "repository": {
     "type": "git",

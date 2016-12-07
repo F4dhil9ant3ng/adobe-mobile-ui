@@ -153,8 +153,8 @@
   right: 0;
   top: 0;
   box-sizing: border-box;
-  background: url(img/dropdown.svg) no-repeat center;
-  background-size: 20px 12px;
+  background: url(../img/dropdown.svg) no-repeat center;
+  background-size: 8px 4px;
 }
 
 .topcoat-combobox__select::-webkit-input-placeholder {
