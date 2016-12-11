@@ -4,14 +4,12 @@
   "description": "UI Components for mobile applications like the PhoneGap Developer App",
   "main": "index.js",
   "scripts": {
-    "build:button:desktop": "rsn -n topcoat -o ./css/button-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts] ./components/button.css",
-    "build:button:mobile": "rsn -n topcoat -o ./css/button-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/button.css",
-    "build:combobox:desktop": "rsn -n topcoat -o ./css/combobox-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts] ./components/combobox.css",
-    "build:combobox:mobile": "rsn -n topcoat -o ./css/combobox-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/combobox.css",
-    "build:tab-bar:desktop": "rsn -n topcoat -o ./css/tab-bar-desktop.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/desktop.css,topcoat-fonts] ./components/tab-bar.css",
-    "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,topcoat-fonts] ./components/tab-bar.css",
-    "build": "rm -rfv ./css/* && npm run build:button:desktop && npm run build:combobox:desktop && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile && npm run build:tab-bar:desktop",
-    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc ./css -p 'Topcoat Button'"
+    "build:root:mobile": "rsn -n topcoat -o ./css/root-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css,./variables/root.css] ./components/root.css",
+    "build:button:mobile": "rsn -n topcoat -o ./css/button-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/button.css",
+    "build:combobox:mobile": "rsn -n topcoat -o ./css/combobox-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/combobox.css",
+    "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/tab-bar.css",
+    "build": "rm -rfv ./css/* && npm run build:root:mobile && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile",
+    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc"
   },
   "repository": {
     "type": "git",
@@ -21,6 +19,11 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/phonegap/adobe-mobile-ui/issues"
+  },
+  "topdoc": {
+    "source": "./css",
+    "assetDirectory": "./assets/",
+    "pugFile": "./template.pug"
   },
   "homepage": "https://github.com/phonegap/adobe-mobile-ui#readme",
   "devDependencies": {
