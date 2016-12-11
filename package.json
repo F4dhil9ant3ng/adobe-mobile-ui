@@ -1,6 +1,6 @@
 {
   "name": "adobe-mobile-ui",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "UI Components for mobile applications like the PhoneGap Developer App",
   "main": "index.js",
   "scripts": {
