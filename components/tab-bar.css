@@ -1,12 +1,22 @@
 @import "topcoat-tab-bar";
 
+.tab-bar {
+  display: flex;
+}
+
+.tab-bar__item {
+  font-size: .722222222rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
 .tab-bar__button,
 .tab-bar__button--selected {
   background: transparent;
   box-shadow: none;
   padding: .625rem 0;
-  margin: 0 2rem;
   border-bottom: 2px solid transparent;
+  text-transform: uppercase;
 }
 
 .tab-bar__button:active,
@@ -15,6 +25,7 @@
 :active + .tab-bar__button {
   border-bottom: 2px solid;
   box-shadow: none;
+  width: 100%;
 }
 
 .tab-bar__button:focus,

@@ -24,19 +24,28 @@
   z-index: 1;
   box-shadow: none, none;
   outline: 0;
+}.topcoat-tab-bar {
+  display: -ms-flexbox;
+  display: flex;
+}.topcoat-tab-bar__item {
+  font-size: .722222222rem;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
 }.topcoat-tab-bar__button,
 .topcoat-tab-bar__button--selected {
   background: transparent;
   box-shadow: none;
   padding: .625rem 0;
-  margin: 0 2rem;
   border-bottom: 2px solid transparent;
+  text-transform: uppercase;
 }.topcoat-tab-bar__button:active,
 .topcoat-tab-bar__button--selected,
 :checked + .topcoat-tab-bar__button,
 :active + .topcoat-tab-bar__button {
   border-bottom: 2px solid;
   box-shadow: none;
+  width: 100%;
 }.topcoat-tab-bar__button:focus,
 :focus + .topcoat-tab-bar__button {
   box-shadow: none;
