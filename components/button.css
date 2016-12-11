@@ -22,7 +22,7 @@
   @extend: %button;
   padding: var(--padding);
   font-size: var(--button-font-size);
-  font-weight: var(--font-weight);
+  font-weight: var(--button-font-weight);
   line-height: var(--line-height);
   letter-spacing: var(--letter-spacing);
   color: var(--color);

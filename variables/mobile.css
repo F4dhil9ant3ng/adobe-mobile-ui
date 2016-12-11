@@ -1,12 +1,13 @@
 :root {
   --base-font-size: 18px;
   --button-font-size: 1rem;
-  --font-weight: 600;
-  --color: hsl(0, 0%, 31%);
+  --font-weight: normal;
+  --color: #505050;
   --color--hover: white;
   --padding: .625rem 4rem;
   --text-shadow: none;
   --border-radius: 22.5px;
+  --background--body: white;
   --background-color: white;
   --background-color--hover: hsl(0, 0%, 29%);
   --background-color--disabled: hsl(0, 0%, 91.8%);
@@ -32,4 +33,6 @@
   --background-color--cta--down: hsl(211, 94%, 38%);
 
   --background-color--tab-bar--active: transparent;
+
+  --button-font-weight: 600;
 }

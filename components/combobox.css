@@ -24,11 +24,13 @@
 .combobox__select {
   border: 1px solid #eaeaea;
   border-radius: 5.5px;
-  font-size: 1rem;
+  font-size: .777777778rem;
+  font-weight: normal;
   height: 44px;
   box-sizing: border-box;
-  padding: 0 0 0 1rem;
-  line-height: 1rem;
+  padding: 0 44px 0 .666666667rem;
+  line-height: .777777778rem;
+  color: var(--color);
 }
 .combobox__container {
   display: inline-block;
@@ -50,6 +52,7 @@
 }
 .combobox__select::placeholder {
   font-style: italic;
+  font-weight: 200;
 }
 .combobox__suggestions-container {
   position: absolute;
