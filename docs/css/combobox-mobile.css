@@ -96,8 +96,8 @@
       <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/>
       <div class="topcoat-combobox__suggestions-container">
         <ul class="topcoat-list__container">
-          <li="topcoat-list__item">Preact</li>
-          <li="topcoat-list__item">React</li>
+          <li class="topcoat-list__item">Preact</li>
+          <li class="topcoat-list__item">React</li>
         </ul>
       </div>
     </div>
@@ -117,9 +117,11 @@
   font-weight: normal;
   height: 44px;
   box-sizing: border-box;
-  padding: 0 0 0 .666666667rem;
+  padding: 0 44px 0 .666666667rem;
   line-height: .777777778rem;
   color: #505050;
+  z-index: 2;
+  position: relative;
 }
 
 .topcoat-combobox__container {
@@ -164,4 +166,30 @@
 
 .topcoat-combobox__suggestions-container {
   position: absolute;
+  background: white;
+  box-sizing: border-box;
+  width: calc(100% - 43px);
+  border: 1px solid #eaeaea;
+  border-radius: 0 0 5.5px 5.5px;
+  top: 39px;
+}
+
+.topcoat-combobox__suggestions-container ul {
+  margin: 0;
+  list-style: none;
+  padding: 4px 0 0 0;
+}
+
+.topcoat-combobox__suggestions-container li {
+  font-size: .777777778rem;
+  font-weight: normal;
+  box-sizing: border-box;
+  padding: .444444444rem .666666667rem;
+  line-height: .777777778rem;
+  color: #505050;
+  cursor: pointer;
+}
+
+.topcoat-combobox__suggestions-container li:hover {
+  background: hsl(0, 0%, 96%);
 }

@@ -9,7 +9,8 @@
     "build:combobox:mobile": "rsn -n topcoat -o ./css/combobox-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/combobox.css",
     "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/tab-bar.css",
     "build": "rm -rfv ./css/* && npm run build:root:mobile && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile",
-    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc"
+    "topdoc": "npm run build && rm -rfv ./docs/* && topdoc",
+    "prepublish": "npm run topdoc"
   },
   "repository": {
     "type": "git",
