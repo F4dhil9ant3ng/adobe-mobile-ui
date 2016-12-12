@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><title>Combobox Mobile</title><link rel="stylesheet" type="text/css" href="css/root-mobile.css"><link rel="stylesheet" type="text/css" href="css/combobox-mobile.css"></head><body><head><h1>Combobox Mobile</h1><nav><ul><li><a href="index.html">Button Mobile</a></li><li class="current">Combobox Mobile</li><li><a href="navigation-bar-mobile.html">Navigation Bar Mobile</a></li><li><a href="root-mobile.html">Root Mobile</a></li><li><a href="tab-bar-mobile.html">Tab Bar Mobile</a></li></ul></nav></head><div class="components"><div class="component"><h2>Combobox</h2><div class="details"></div><div class="component-demo"><div class="topcoat-combobox__container" style="margin:100px;"> <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/> <div class="topcoat-combobox__suggestions-container"> <ul class="topcoat-list__container"> <li class="topcoat-list__item">Preact</li> <li class="topcoat-list__item">React</li> </ul> </div> </div></div><pre class="html">&lt;div class=&quot;topcoat-combobox__container&quot; style=&quot;margin:100px;&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;topcoat-combobox__select&quot; placeholder=&quot;Type Here&quot;/&gt; &lt;div class=&quot;topcoat-combobox__suggestions-container&quot;&gt; &lt;ul class=&quot;topcoat-list__container&quot;&gt; &lt;li class=&quot;topcoat-list__item&quot;&gt;Preact&lt;/li&gt; &lt;li class=&quot;topcoat-list__item&quot;&gt;React&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt;</pre><pre class="css"><code>.topcoat-combobox__select {
+<!DOCTYPE html><html lang="en"><head><title>Combobox Mobile</title><link rel="stylesheet" type="text/css" href="css/root-mobile.css"><link rel="stylesheet" type="text/css" href="css/combobox-mobile.css"></head><body><head><h1>Combobox Mobile</h1><nav><ul><li><a href="index.html">Button Mobile</a></li><li class="current">Combobox Mobile</li><li><a href="navigation-bar-mobile.html">Navigation Bar Mobile</a></li><li><a href="root-mobile.html">Root Mobile</a></li><li><a href="tab-bar-mobile.html">Tab Bar Mobile</a></li></ul></nav></head><div class="components"><div class="component"><h2>Combobox</h2><div class="details"></div><div class="component-demo"><div class="topcoat-combobox__container" style="margin:20px 20px 300px;"> <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/> <div class="topcoat-combobox__suggestions-container"> <ul class="topcoat-list__container"> <li class="topcoat-list__item">Preact</li> <li class="topcoat-list__item">React</li> </ul> </div> </div> <div class="topcoat-combobox__container--open" style="margin:20px 20px 300px;"> <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/> <div class="topcoat-combobox__suggestions-container"> <ul class="topcoat-list__container"> <li class="topcoat-list__item">Preact</li> <li class="topcoat-list__item">React</li> </ul> </div> </div></div><pre class="html">&lt;div class=&quot;topcoat-combobox__container&quot; style=&quot;margin:20px 20px 300px;&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;topcoat-combobox__select&quot; placeholder=&quot;Type Here&quot;/&gt; &lt;div class=&quot;topcoat-combobox__suggestions-container&quot;&gt; &lt;ul class=&quot;topcoat-list__container&quot;&gt; &lt;li class=&quot;topcoat-list__item&quot;&gt;Preact&lt;/li&gt; &lt;li class=&quot;topcoat-list__item&quot;&gt;React&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;topcoat-combobox__container--open&quot; style=&quot;margin:20px 20px 300px;&quot;&gt; &lt;input type=&quot;text&quot; class=&quot;topcoat-combobox__select&quot; placeholder=&quot;Type Here&quot;/&gt; &lt;div class=&quot;topcoat-combobox__suggestions-container&quot;&gt; &lt;ul class=&quot;topcoat-list__container&quot;&gt; &lt;li class=&quot;topcoat-list__item&quot;&gt;Preact&lt;/li&gt; &lt;li class=&quot;topcoat-list__item&quot;&gt;React&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;/div&gt;</pre><pre class="css"><code>.topcoat-combobox__select {
   border: 1px solid #eaeaea;
   border-radius: 5.5px;
   font-size: .777777778rem;
@@ -13,13 +13,15 @@
   margin: 0;
   box-shadow: none;
   -webkit-appearance: none;
-}.topcoat-combobox__container {
+}.topcoat-combobox__container,
+.topcoat-combobox__container--open {
   display: inline-block;
   position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}.topcoat-combobox__container:after {
+}.topcoat-combobox__container:after,
+.topcoat-combobox__container--open:after {
   content: '';
   width: 44px;
   height: 44px;
@@ -55,6 +57,9 @@
   top: 48px;
   left: 0;
   box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+  display: none;
+}.topcoat-combobox__container--open .topcoat-combobox__suggestions-container {
+  display: block;
 }.topcoat-combobox__suggestions-container ul {
   margin: 0;
   list-style: none;
@@ -68,6 +73,4 @@
   line-height: .777777778rem;
   color: #505050;
   cursor: pointer;
-}.topcoat-combobox__suggestions-container li:hover {
-  background: hsl(0, 0%, 96%);
 }</code></pre></div></div></body></html>

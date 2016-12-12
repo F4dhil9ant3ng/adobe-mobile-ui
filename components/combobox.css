@@ -2,7 +2,16 @@
   name: Combobox
   description: A combobox
   markup:
-    <div class="topcoat-combobox__container" style="margin:100px;">
+    <div class="topcoat-combobox__container" style="margin:20px 20px 300px;">
+      <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/>
+      <div class="topcoat-combobox__suggestions-container">
+        <ul class="topcoat-list__container">
+          <li class="topcoat-list__item">Preact</li>
+          <li class="topcoat-list__item">React</li>
+        </ul>
+      </div>
+    </div>
+    <div class="topcoat-combobox__container--open" style="margin:20px 20px 300px;">
       <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/>
       <div class="topcoat-combobox__suggestions-container">
         <ul class="topcoat-list__container">
@@ -35,14 +44,14 @@
   box-shadow: none;
   -webkit-appearance: none;
 }
-.combobox__container {
+.combobox__container, .combobox__container--open {
   display: inline-block;
   position: relative;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.combobox__container:after {
+.combobox__container:after, .combobox__container--open:after {
   content: '';
   width: 44px;
   height: 44px;
@@ -71,6 +80,10 @@
   top: 48px;
   left: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: none;
+}
+.combobox__container--open .combobox__suggestions-container {
+  display: block;
 }
 .combobox__suggestions-container ul {
   margin: 0;
@@ -86,7 +99,4 @@
   line-height: .777777778rem;
   color: var(--color);
   cursor: pointer;
-}
-.combobox__suggestions-container li:hover {
-  background: hsl(0, 0%, 96%);
 }
