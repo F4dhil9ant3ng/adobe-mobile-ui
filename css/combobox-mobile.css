@@ -2,7 +2,7 @@
   name: Combobox
   description: A combobox
   markup:
-    <div class="topcoat-combobox__container">
+    <div class="topcoat-combobox__container" style="margin:100px;">
       <input type="text" class="topcoat-combobox__select" placeholder="Type Here"/>
       <div class="topcoat-combobox__suggestions-container">
         <ul class="topcoat-list__container">
@@ -32,11 +32,17 @@
   color: #505050;
   z-index: 2;
   position: relative;
+  margin: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
 }
 
 .topcoat-combobox__container {
   display: inline-block;
   position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .topcoat-combobox__container:after {
@@ -79,23 +85,26 @@
   position: absolute;
   background: white;
   box-sizing: border-box;
-  width: calc(100% - 43px);
+  width: 100%;
   border: 1px solid #eaeaea;
-  border-radius: 0 0 5.5px 5.5px;
-  top: 39px;
+  border-radius: 5.5px;
+  top: 48px;
+  left: 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
 }
 
 .topcoat-combobox__suggestions-container ul {
   margin: 0;
   list-style: none;
-  padding: 4px 0 0 0;
+  padding: 0;
 }
 
 .topcoat-combobox__suggestions-container li {
   font-size: .777777778rem;
   font-weight: normal;
   box-sizing: border-box;
-  padding: .444444444rem .666666667rem;
+  padding: .888888889rem .666666667rem;
+  height: 44px;
   line-height: .777777778rem;
   color: #505050;
   cursor: pointer;
