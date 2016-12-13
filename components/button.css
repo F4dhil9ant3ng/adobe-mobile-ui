@@ -39,7 +39,7 @@
 }
 
 .button:hover {
-  background-color: var(--background-color--hover);
+  background-color: hsl(113, 0%, 31%);
   color: var(--color--hover);
 }
 
@@ -50,9 +50,9 @@
 }
 
 .button:focus {
-  border: var(--border--focus);
-  box-shadow: var(--box-shadow--focus);
-  background-color: var(--background-color--focus);
+  background-color: var(--background-color--down);
+  box-shadow: var(--box-shadow--down);
+  color: var(--color--hover);
   outline: 0;
   color: var(--color--hover);
 }
@@ -107,6 +107,8 @@
   border: var(--border--cta);
 }
 .button--cta:focus {
+  background-color: var(--background-color--cta--down);
+  border: var(--border--cta);
   outline: 0;
 }
 
@@ -134,6 +136,7 @@
   border: var(--border);
   @extend: .button:hover;
   @extend: .button:focus;
+  box-shadow: var(--box-shadow--quiet);
 }
 
 .button--quiet:disabled {
@@ -142,12 +145,14 @@
 
 .button--quiet:hover {
   text-shadow: var(--text-shadow);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow--quiet);
   background-color: var(--background-color--hover);
+  color: var(--color--hover--quiet);
 }
 
-.button--quiet:active {
+.button--quiet:active, .button--quiet:focus {
   text-shadow: var(--text-shadow);
-  background-color: var(--background-color--down);
-  box-shadow: var(--box-shadow);
+  background-color: var(--background-color--down--active);
+  box-shadow: var(--box-shadow--quiet);
+  color: var(--color--hover--quiet);
 }
