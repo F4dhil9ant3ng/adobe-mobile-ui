@@ -9,7 +9,8 @@
     "build:combobox:mobile": "rsn -n topcoat -o ./css/combobox-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/combobox.css",
     "build:tab-bar:mobile": "rsn -n topcoat -o ./css/tab-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/tab-bar.css",
     "build:navigation-bar:mobile": "rsn -n topcoat -o ./css/navigation-bar-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/navigation-bar.css",
-    "build": "rm -rfv ./css/* && npm run build:root:mobile && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile && npm run build:navigation-bar:mobile",
+    "build:list:mobile": "rsn -n topcoat -o ./css/list-mobile.css -p [topcoat-variables-shared,topcoat-variables-desktop,topcoat-variables-dark,./variables/mobile.css] ./components/list.css",
+    "build": "rm -rfv ./css/* && npm run build:root:mobile && npm run build:button:mobile && npm run build:combobox:mobile && npm run build:tab-bar:mobile && npm run build:navigation-bar:mobile && npm run build:list:mobile",
     "topdoc": "npm run build && rm -rfv ./docs/* && topdoc",
     "prepublish": "npm run topdoc"
   },
@@ -36,6 +37,7 @@
   "dependencies": {
     "topcoat-button-bar-base": "^1.0.0",
     "topcoat-fonts": "^0.3.0",
+    "topcoat-list": "^1.0.0",
     "topcoat-navigation-bar": "^0.7.0",
     "topcoat-root": "^1.0.0",
     "topcoat-select-base": "^0.1.0",
