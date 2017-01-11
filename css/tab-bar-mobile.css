@@ -134,7 +134,7 @@
 
 .topcoat-tab-bar__button,
 .topcoat-tab-bar__button--selected {
-  padding: .625rem 4rem;
+  padding: .625rem 1.25rem;
   min-height: 1.313rem;
   line-height: 1.313rem;
   letter-spacing: 0;
